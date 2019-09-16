@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/transform.js"></script>
+
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    html,
+    body {
+        height: 100%;
+        overflow: hidden;
+    }
+
+    #wrap {
+        height: 100%;
+        overflow: hidden;
+    }
+</style>
+
+<body>
+    <div id="wrap">
+        <div class="carousel-wrap" autogo="true">
+            <div class="point-wrap" data-befColor="white" data-activeColor="blue"></div>
+        </div>
+    </div>
+    <script>
+        //禁止全部默认事件
+        document.addEventListener('touchstart', function (ev) {
+            ev = ev || event;
+            ev.preventDefault();
+        });
+        const pic = ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg'];
+        window.onload = function () {
+            damu.carousel(pic);
+        }
+    </script>
+</body>
+
+</html>
